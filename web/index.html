@@ -12,8 +12,19 @@
 </head>
 
 <body>
+  <!-- 
+    using the LibraryOnly bundling mode from ScalaJS Bundler, described here:
+      https://github.com/scalacenter/scalajs-bundler/blob/master/manual/src/ornate/reference.md#library-only-bundling-mode-library-only.
+    this relies on `webpackBundlingMode := BundlingMode.LibraryOnly()` being set in `build.sbt`
+  -->
   <script type="text/javascript"
-    src="../target/scala-3.0.2/scalajs-bundler/main/scala-threejs-facades-examples-fastopt-bundle.js"></script>
+    src="../target/scala-3.0.2/scalajs-bundler/main/scala-threejs-facades-examples-fastopt-library.js"></script>
+  <script type="text/javascript"
+    src="../target/scala-3.0.2/scalajs-bundler/main/scala-threejs-facades-examples-fastopt-loader.js"></script>
+  <script type="text/javascript"
+    src="../target/scala-3.0.2/scalajs-bundler/main/scala-threejs-facades-examples-fastopt.js"></script>
+  <!-- when doing fullOpt, we probably don't want the above library pattern, so instead we include only the following: -->
+  <!-- <script type="test/javascript" src="../target/scala-3.0.2/scalajs-bundler/main/scala-threejs-facades-examples-opt-bundle.js"></script> -->
 </body>
 
 </html>
