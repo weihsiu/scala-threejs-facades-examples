@@ -16,6 +16,8 @@ Compile / npmDependencies ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.cascaval" %%% "three-typings" % "0.1.7-SNAPSHOT",
+  "org.cascaval" %%% "scala-threejs-facades" % "0.131.1-SNAPSHOT",
   ("org.scala-js" %%% "scalajs-dom" % "1.2.0").cross(CrossVersion.for3Use2_13)
 )
+
+webpackBundlingMode := BundlingMode.LibraryOnly()

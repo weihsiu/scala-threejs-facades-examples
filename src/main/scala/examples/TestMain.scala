@@ -29,7 +29,7 @@ object TestMain:
     scene.add(cube)
 
     val text = Text()
-    text.text = "Hello World"
+    text.text = "Hello Bundling!"
     text.fontSize = 0.2
     text.position.x = 5
     text.position.z = -2
